@@ -1,0 +1,37 @@
+data:
+    container_name: ci_data
+    image: busybox
+    restart: always
+    volumes:
+        - ../:/var/www/ci
+        - /vendor
+        - ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro
+        - ~/.composer:/root/.composer
+        - /tmpfs
+    tty: true
+
+
+nginx:
+    container_name: ci_nginx
+    image: nginx:1.7
+    restart: always
+    links:
+        - php
+    volumes_from:
+        - data
+    ports:
+      - "80:80"
+    volumes:
+        - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+
+php:
+    container_name: ci_php
+    restart: always
+    build: php
+    working_dir: /var/www/ci
+    environment:
+      CI_ENV: development
+    volumes_from:
+        - data
+    mem_limit: 2000000000
