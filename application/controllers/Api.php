@@ -10,10 +10,10 @@ function __contruct(){
     parent: __construct();
     $this->load->helper('my_api');
     // header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-    // header("Access-Control-Allow-Origin : * ");
-    // if ( "OPTIONS" === $_SERVER['REQUEST_METHOD'] ) {
-    // die();
-    // }
+    header("Access-Control-Allow-Origin : * ");
+    if ( "OPTIONS" === $_SERVER['REQUEST_METHOD'] ) {
+    die();
+    }
 
 }
 
