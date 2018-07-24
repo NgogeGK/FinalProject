@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/jkusda_api/';
+$config['base_url'] = 'https://kwamboka.herokuapp.com/';
 // $config['base_url'] = 'http://api.jkusdachurch.org/';
 // $config['site_url'] = 'http://api.jkusdachurch.org/';
 /*
