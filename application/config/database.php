@@ -100,10 +100,10 @@ $query_builder = TRUE;
 //
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => " gmgcjwawatv599gq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306",
+	'hostname' => "gmgcjwawatv599gq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306",
 	'username' => 'q7tsawbsgudbnl9x',
-	'password' => ' y4dj0acdv3i5x2dm',
-	'database' => ' zjy6eiw9kkgurgtk',
+	'password' => 'y4dj0acdv3i5x2dm',
+	'database' => 'zjy6eiw9kkgurgtk',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
