@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 $method = $_SERVER['REQUEST_METHOD'];
         if ($method == "OPTIONS") {
             die();
-        }
+        }else{
 
 class API extends REST_Controller{
 
@@ -1472,5 +1472,7 @@ else{
 }
 }
 
+
+}
 
 }
