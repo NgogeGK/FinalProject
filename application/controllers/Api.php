@@ -20,6 +20,10 @@ function __contruct(){
 
 }
 
+public function index_options() {
+    return $this->response(NULL, 200);
+}
+
 function yangu()
 {
     $this->load->model('repo_model');
