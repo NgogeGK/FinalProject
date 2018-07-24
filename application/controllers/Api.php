@@ -9,6 +9,9 @@ header('Access-Control-Allow-Origin: *');
 class API extends REST_Controller{
 
 function __contruct(){
+
+    parent:: __construct();
+    $this->load->helper('my_api');
     header('Access-Control-Allow-Origin: *');
         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
@@ -16,8 +19,6 @@ function __contruct(){
         if ($method == "OPTIONS") {
             die();
         }
-    parent:: __construct();
-    $this->load->helper('my_api');
     
 
 }
