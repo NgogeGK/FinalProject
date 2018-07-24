@@ -1,10 +1,6 @@
 <?php defined('BASEPATH') or exit ('No direct script access allowed');
 require APPPATH.'/libraries/REST_Controller.php';
 header('Access-Control-Allow-Origin: *');
-$method = $_SERVER['REQUEST_METHOD'];
-        if ($method == "OPTIONS") {
-            die();
-        }else{
 
 class API extends REST_Controller{
 
@@ -16,6 +12,7 @@ function __contruct(){
         header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
         $method = $_SERVER['REQUEST_METHOD'];
+        var_dump($method);
         if ($method == "OPTIONS") {
             die();
         }
@@ -1475,4 +1472,4 @@ else{
 
 }
 
-}
+
